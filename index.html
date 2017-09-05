@@ -1,1 +1,53 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Domingo.js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/domingo.js">
+    </script>
+    <script type="text/javascript" src="lib/todos.js">
+    </script>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <h1>Domingo.js Todo App</h1>
+    <div class="outer-div">
+      <div class="todos-wrapper">
+        <div class="form">
+          <h3>Todo List</h3>
+          <p>(Type in Todo and click Add Todo! to add it to list below)</p>
+          <input class="todo-input"></input>
+          <div class="buttons">
+            <div onclick="addTodo()" class="add-todo">
+              Add Todo!
+            </div>
+            <div onclick="clearTodos()">
+              Clear Todos!
+            </div>
+            <div onclick="colorizeTodos()">
+              Colorize Todos!
+            </div>
+          </div>
+        </div>
+        <div class="todos-div">
+          <h4>Todos</h4>
+          <ul class='todo-items'>
+            <li class="default-todo">None yet!</li>
+          </ul>
+        </div>
+      </div>
+      <div class='gif-div'>
+        <h3>Find your Motivational GIF!</h3>
+        <div class="buttons gif-list">
+          <div onclick="requestGif()">
+              Get your GIF!
+          </div>
+        </div>
+        <div class="gif-box">
+            <img>
+        </div>
+      </div> 
+    </div>
+  </body>
+</html>

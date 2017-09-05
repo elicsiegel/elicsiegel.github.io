@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: lightblue;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form p {
+  margin-top: 0px;
+}
+
+.buttons {
+  display: flex; 
+  margin-top: 10px;
+}
+
+.buttons > * {
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  background: lightgreen;
+}
+
+.buttons > *:hover {
+  background: green; 
+}
+
+.todo-items {
+  list-style: none;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+.todos-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todos-div li {
+  min-width: 200px;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.gif-div {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.gif-div h3 {
+  margin-bottom: 3px;
+}
+
+.gif-list {
+  width: 500px;
+  justify-content: center;
+}
+
+.gif-box {
+  margin-top: 10px;
+}
+
+.gif-box img {
+  width: 200px;
+}
