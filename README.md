@@ -1,120 +1,62 @@
-# Domingo.js
+# [Start Bootstrap - Freelancer](https://startbootstrap.com/template-overviews/freelancer/)
 
-Domingo.js is a JavaScript DOM interaction library inspired by jQuery. 
+[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
 
-## Getting Started
+## Preview
 
-The quickest way to get started with Domingo is to download the `lib/main.js` and `lib/dom_node_collection` files and compile them using webpack, ie. `webpack --watch lib/main.js lib/my_app.js`.
+[![Freelancer Preview](https://startbootstrap.com/assets/img/templates/freelancer.jpg)](https://blackrockdigital.github.io/startbootstrap-freelancer/)
 
-## Todo App Demo
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-freelancer/)**
 
-Functions used in the Todo App Demo are stored in the `lib/todos.js` file. These functions are triggered using event listeners stored on divs in the html document. To create more functionality, add more functions to the `lib/todos.js` file and add event listeners to buttons in the html document.  
+## Status
 
-## API Structure
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-freelancer/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-freelancer.svg)](https://www.npmjs.com/package/startbootstrap-freelancer)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-freelancer.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-freelancer)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer?type=dev)
 
-The core functionality of Domingo.js is DOMNodeCollection. Each DOMNode holds an array of DOM Elements which can be manipulated with the various class functions, ie. `html`, `empty`, `attr`, etc.
+## Download and Installation
 
-```javascript
-  html(string) {
-    if (string === undefined) {
-      return this.elements[0].innerHTML;
-    } else {
-      for (let i = 0; i < this.elements.length; i++) {
-        this.elements[i].innerHTML = string;
-      }
-    }
-  }
-```
-## DOM Selection 
+To begin using this template, choose one of the following options to get started:
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/freelancer/)
+* Install via npm: `npm i startbootstrap-freelancer`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-freelancer.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-freelancer)
 
-The Domingo.js library utilizes the global variable of `$l` as a wrapper for all of the methods in the Domingo.js library. `$l` can select elements by class, id or HTML Element Type. For example, `$l("div")` returns a `DOMNodeCollection` object holding an array of all divs in the html document.  
+## Usage
 
-## Functions
+### Basic Usage
 
-### DOM Traversal
+After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-`DOMNodeCollection` methods to navigate DOM elements
+### Advanced Usage
 
-#### `each` 
+After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
 
-Iterates through the elements in a `DOMNodeCollection` and applies a callback function passed as an argument
+## Bugs and Issues
 
-#### `children`
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/).
 
-Returns a `DOMNodeCollection` object containing all of the children elements of every `HTMLElement` in the original `DOMNodeCollection`.  Note that this only includes the direct children.
+## Custom Builds
 
-#### `parent`
+You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
 
-Returns a `DOMNodeCollection` object containing the parent elements of every `HTMLElement` in the original `DOMNodeCollection`.  
+## About
 
-### DOM Manipulation - `DOMNodeCollection` methods to view and/or change DOM elements
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-#### `html`
+* https://startbootstrap.com
+* https://twitter.com/SBootstrap
 
-Returns the `innerHTML` for the first element in the `DOMNodeCollection` if no argument is given.  If a string argument is given, changes the `innerHTML` of each `DOMNodeCollection` element to the string argument.
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
-#### `empty` 
+* http://davidmiller.io
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
 
-Empties the innerHTML of each `DOMNodeCollection` element
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-#### `append` 
+## Copyright and License
 
-Takes a single `HTMLElement`, `DOMNodeCollection`, or `string` argument and appends it to each `DOMNodeCollection` element.
-
-#### `remove` 
-
-Remove each `DOMNodeCollection` element from the DOM.
-
-#### `attr`
-
-Takes either one (`attr(attribute)`) or two (`attr(attribute, value)`) arguments.  If given one argument, the method gets the value of the attribute given for the the first element in the `DOMNodeCollection`.  The method sets the attribute, given as the first argument, as the value, given as the second argument, for each `DOMNodeCollection` element.
-
-#### `addClass` 
-
-Adds a class, given as an argument, to each `DOMNodeCollection` element.
-
-#### `removeClass` 
-
-Removes a class, given as an argument, from each `DOMNodeCollection` element.
-
-### Event Listeners
-
-#### `on`
-
-Adds event listener to each `DOMNodeCollection` element.  List of events are available [here](https://developer.mozilla.org/en-US/docs/Web/Events).
-
-#### `off` 
-
-Removes event listener from each `DOMNodeCollection` element.
-
-### Ajax
-
-Domingo.js also comes with an Ajax function, $l.ajax(options). By default, the options are provided but the use of $l.extend ensures that any options passed in are preserved.
-
-```javascript
-$l.ajax = function(options) {
-  const defaults = {
-    type: "GET",
-    url: "",
-    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-    data: {},
-    success: () => {},
-    error: () => {}
-  };
-
-  let obj = $l.extend(defaults, options);
-  
-  const xhr = new XMLHttpRequest();
-  xhr.open(obj.type, obj.url);
-
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      const parsedResponse = JSON.parse(xhr.response); 
-      obj.success(parsedResponse);
-    } else {
-      obj.error(xhr.response);
-    }
-  };
-  xhr.send(JSON.stringify(obj.data));
-};
-```
+Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/gh-pages/LICENSE) license.

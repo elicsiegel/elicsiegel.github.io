@@ -1,0 +1,32 @@
+header.masthead {
+  background: url('../img/nyc.jpeg');
+  background-size: cover;
+}
+.masthead img {
+  width: 200px;
+  border-radius: 100%;
+}
+
+#mainNav {
+  background: rgba(0,0,0,0.5);
+}
+
+.container h2 {
+  margin-bottom: 20px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption {
+  background: rgba(0,0,0,0.5);
+}
+
+/*.nav-item a:hover {
+  color: lightgray !important;
+}*/
+
+/*section.success {
+  background: gray;
+}*/
+
+.modal-body img {
+  margin-top: 20px;
+}
