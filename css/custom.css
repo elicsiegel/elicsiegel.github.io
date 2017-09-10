@@ -1,7 +1,30 @@
+.skills-list {
+  display: flex; 
+  align-items: center;
+}
+
+.skills-list li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70px;
+  width: 100px;
+}
+
+.skills-list li img {
+  width: 60px;
+  height: 60px;
+}
+
+.skills-list li span {
+  margin-top: 5px;
+}
+
 header.masthead {
   background: url('../img/nyc.jpeg');
   background-size: cover;
 }
+
 .masthead img {
   width: 200px;
   border-radius: 100%;
