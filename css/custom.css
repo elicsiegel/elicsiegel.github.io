@@ -53,3 +53,7 @@ header.masthead {
 .modal-body img {
   margin-top: 20px;
 }
+
+.modal-body a {
+  color: blue;
+}
