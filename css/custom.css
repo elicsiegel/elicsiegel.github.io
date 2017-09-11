@@ -49,3 +49,13 @@ header.masthead {
 .modal-body a {
   color: blue;
 }
+
+@media (max-width: 767px) {
+  .skills-list {
+    flex-direction: column;
+  }
+
+  .skills-list > * {
+    margin-top: 30px;
+  }
+}
