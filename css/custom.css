@@ -30,6 +30,16 @@ header.masthead {
   border-radius: 100%;
 }
 
+.about-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#about img {
+  width: 200px;
+}
+
 #mainNav {
   background: rgba(0,0,0,0.5);
 }
