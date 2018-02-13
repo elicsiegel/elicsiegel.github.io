@@ -23,6 +23,7 @@
     <link href="css/freelancer.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108786257-1"></script>
     <script>
@@ -56,6 +57,9 @@
               <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#map">Map</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
@@ -75,7 +79,7 @@
     </header>
 
     <!-- About Section -->
-    <section class="success" id="about">
+    <section class="success bigSection" id="about">
       <div class="container">
         <h2 class="text-center">About</h2>
         <div class="row">
@@ -96,7 +100,7 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <section id="portfolio" class="bigSection">
       <div class="container">
         <h2 class="text-center">Portfolio</h2>
         <div class="row">
@@ -137,12 +141,12 @@
       </div>
     </section>
 
-    
+
     <!-- Skills Section -->
-    <section id="skills" class='success'>
+    <section id="skills" class='success bigSection'>
       <div class="container">
           <h2 class="text-center">Skills</h2>
-        
+
           <p class="text-center">I've got some skills</p>
           <ul class="list-inline skills-list">
             <li class="list-inline-item">
@@ -193,11 +197,72 @@
       </div>
     </section>
 
+    <!-- About Section -->
+    <section class="success bigSection" id="map">
+      <h2>Countries I've been</h2>
+      <p>(Shown in blue)</p>
+      <div class="container" id="map-container" style="position: relative; text-align: center; width: 100%; max-height: 800px;">
+      </div>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <!-- I recommend you host this file on your own, since this will change without warning -->
+        <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
+        <script>
+            var map = new Datamap({
+              element: document.getElementById('map-container'),
+              fills: {
+                defaultFill: "#ABDDA4",
+                authorHasTraveledTo: "#0033cc"
+              },
+              data: {
+                USA: { fillKey: "authorHasTraveledTo" },
+                CAN: { fillKey: "authorHasTraveledTo" },
+                MEX: { fillKey: "authorHasTraveledTo" },
+                CUB: { fillKey: "authorHasTraveledTo" },
+                PAN: { fillKey: "authorHasTraveledTo" },
+                BRA: { fillKey: "authorHasTraveledTo" },
+                ECU: { fillKey: "authorHasTraveledTo" },
+                ARG: { fillKey: "authorHasTraveledTo" },
+                URY: { fillKey: "authorHasTraveledTo" },
+                JPN: { fillKey: "authorHasTraveledTo" },
+                CHN: { fillKey: "authorHasTraveledTo" },
+                THA: { fillKey: "authorHasTraveledTo" },
+                MMR: { fillKey: "authorHasTraveledTo" },
+                PHL: { fillKey: "authorHasTraveledTo" },
+                MAR: { fillKey: "authorHasTraveledTo" },
+                ISR: { fillKey: "authorHasTraveledTo" },
+                TUR: { fillKey: "authorHasTraveledTo" },
+                FRA: { fillKey: "authorHasTraveledTo" },
+                ESP: { fillKey: "authorHasTraveledTo" },
+                PRT: { fillKey: "authorHasTraveledTo" },
+                GBR: { fillKey: "authorHasTraveledTo" },
+                BIH: { fillKey: "authorHasTraveledTo" },
+                IRL: { fillKey: "authorHasTraveledTo" },
+                BEL: { fillKey: "authorHasTraveledTo" },
+                DNK: { fillKey: "authorHasTraveledTo" },
+                SWE: { fillKey: "authorHasTraveledTo" },
+                CHE: { fillKey: "authorHasTraveledTo" },
+                NLD: { fillKey: "authorHasTraveledTo" },
+                POL: { fillKey: "authorHasTraveledTo" },
+                CZE: { fillKey: "authorHasTraveledTo" },
+                AUT: { fillKey: "authorHasTraveledTo" },
+                SVN: { fillKey: "authorHasTraveledTo" },
+                HRV: { fillKey: "authorHasTraveledTo" },
+                HUN: { fillKey: "authorHasTraveledTo" },
+                SVK: { fillKey: "authorHasTraveledTo" },
+                GRC: { fillKey: "authorHasTraveledTo" },
+                ITA: { fillKey: "authorHasTraveledTo" },
+                DEU: { fillKey: "authorHasTraveledTo" },
+              }
+            });
+        </script>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="bigSection">
       <div class="container">
           <h2 class="text-center">Contact</h2>
-        
+
           <p class="text-center">Let's chat</p>
           <h5 class="text-center">Email me at:</h5>
           <p class="text-center">
@@ -212,7 +277,7 @@
         <div class="container">
           <div class="row">
             <div class="footer-col col-md-4">
-              
+
             </div>
             <div class="footer-col col-md-4">
               <ul class="list-inline">
@@ -228,7 +293,7 @@
                 </li>
               </ul>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -269,11 +334,11 @@
                     <a href="http://medionews.com">Live</a> /
                     <a href="https://github.com/elicsiegel/Medio">Github</a>
                   </p>
-                  <p>A Medium inspired single page web app built with Rails and React/Redux 
+                  <p>A Medium inspired single page web app built with Rails and React/Redux
                   </p>
                   <ul class="list-inline item-details">
                     <li>
-                      - Leverages a RESTful JSON API with Story CRUD for clear, optimized code 
+                      - Leverages a RESTful JSON API with Story CRUD for clear, optimized code
                     </li>
                     <li>
                       - Integrates search feature that queries the database as user types using jQuery AJAX requests
@@ -313,7 +378,7 @@
                     <a href="http://elicsiegel.com/MinionRunner/">Live</a> /
                     <a href="https://github.com/elicsiegel/MinionRunner">Github</a>
                   </p>
-                  <p>An infinite run game built in JavaScript with a Minion theme 
+                  <p>An infinite run game built in JavaScript with a Minion theme
                   </p>
                   <ul class="list-inline item-details">
                     <li>
@@ -358,7 +423,7 @@
                   </p>
                   <ul class="list-inline item-details">
                     <li>
-                      - Loads HTML elements in DOM Node Collection class to control DOM manipulation and event handling 
+                      - Loads HTML elements in DOM Node Collection class to control DOM manipulation and event handling
                     </li>
                     <li>
                       - Includes AJAX functions using XMLHttpRequest Web API
@@ -389,6 +454,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
+    <script src="js/custom.js"></script>
 
   </body>
 

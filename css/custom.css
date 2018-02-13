@@ -1,5 +1,8 @@
+.bigSection {
+  -webkit-animation-duration: 5s;
+}
 .skills-list {
-  display: flex; 
+  display: flex;
   align-items: center;
 }
 
@@ -62,12 +65,41 @@ header.masthead {
   color: blue;
 }
 
+#map {
+  background: lightgray;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  color: black;
+}
+
+#map h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#map-container {
+  min-height: 475px;
+}
+
 @media (max-width: 767px) {
+  #map-container {
+    min-height: 350px;
+  }
   .skills-list {
     flex-direction: column;
   }
 
   .skills-list > * {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  #map-container {
+    min-height: 250px;
   }
 }
